@@ -42,8 +42,6 @@ npm start
 4. Run `migrations/001_initial.sql` in the Neon database used by this project, then deploy.
 5. Future commits to the production branch deploy automatically.
 
-See [VERCEL-KURULUM-TR.md](VERCEL-KURULUM-TR.md) for beginner-friendly instructions. A database-free deployment shows curated walks and local planning screens, but the event feed, publishing and server-side saves need Neon.
-
 ## Data and identity
 
 Interest preferences, bookmarked events, draft plans and completed day plans use browser `localStorage`. Walk saves use PostgreSQL and an opaque, HttpOnly visitor cookie; its hash identifies the browser. This is **anonymous browser identity**, not a user account or cross-device login. Clearing cookies loses access to previous walk saves. Clearing browser storage removes local plans.
